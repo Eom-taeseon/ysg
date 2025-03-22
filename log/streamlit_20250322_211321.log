@@ -1,0 +1,490 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.0.9:8501
+
+2025-03-22 21:15:20.928 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 593, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\main.py", line 36, in <module>
+    df_house = Later_Assets(mem_union, avg_cost, avg_area, total_area)()
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\code\later_assets.py", line 29, in __init__
+    self.total_cost_gen = self.avg_cost * self.total_area_gen
+AttributeError: 'Later_Assets' object has no attribute 'avg_cost'
+2025-03-22 21:25:26.995 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+2025-03-22 21:25:27.069 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 593, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\main.py", line 42, in <module>
+    web_Business_Cost()(budget_cal)
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\web\web_Business_Cost.py", line 13, in __call__
+    distrct_list = os.listdir("./code/rate")
+FileNotFoundError: [WinError 3] 지정된 경로를 찾을 수 없습니다: './code/rate'
+2025-03-22 21:25:56.618 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 593, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\main.py", line 36, in <module>
+    df_house = Later_Assets(mem_union, avg_cost, avg_area, total_area)()
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\src_code\later_assets.py", line 13, in __init__
+    self.avg_cost_union = avg_cost * 0.85
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'float'
+2025-03-22 21:26:57.140 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 593, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\main.py", line 36, in <module>
+    df_house = Later_Assets(mem_union, avg_cost, avg_area, total_area)()
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\src_code\later_assets.py", line 13, in __init__
+    self.avg_cost_union = float(avg_cost) * 0.85
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+2025-03-22 21:27:10.323 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 593, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\main.py", line 36, in <module>
+    df_house = Later_Assets(mem_union, avg_cost, avg_area, total_area)()
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\src_code\later_assets.py", line 13, in __init__
+    self.avg_cost_union = avg_cost * 0.85
+TypeError: unsupported operand type(s) for *: 'NoneType' and 'float'
+2025-03-22 21:27:31.822 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+2025-03-22 21:27:31.883 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 593, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\main.py", line 42, in <module>
+    web_Business_Cost()(budget_cal)
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\web\web_Business_Cost.py", line 13, in __call__
+    distrct_list = os.listdir("./code/rate")
+FileNotFoundError: [WinError 3] 지정된 경로를 찾을 수 없습니다: './code/rate'
+2025-03-22 21:28:06.120 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+건축비(공사비)를 입력해주세요
+2025-03-22 21:28:12.114 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+건축비(공사비)를 입력해주세요
+2025-03-22 21:28:13.272 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+건축비(공사비)를 입력해주세요
+2025-03-22 21:28:14.268 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+건축비(공사비)를 입력해주세요
+2025-03-22 21:28:17.135 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+건축비(공사비)를 입력해주세요
+2025-03-22 21:29:09.759 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+건축비(공사비)를 입력해주세요
+2025-03-22 21:29:14.158 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+건축비(공사비)를 입력해주세요
+2025-03-22 21:29:18.059 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+건축비(공사비)를 입력해주세요
+2025-03-22 21:29:19.073 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+건축비(공사비)를 입력해주세요
+2025-03-22 21:29:20.537 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+건축비(공사비)를 입력해주세요
+2025-03-22 21:32:29.359 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+건축비(공사비)를 입력해주세요
+2025-03-22 21:32:49.972 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+건축비(공사비)를 입력해주세요
+2025-03-22 21:34:27.568 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+공사 면적을 입력해주세요
+2025-03-22 21:34:29.243 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+2025-03-22 21:34:29.288 Uncaught app execution
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\exec_code.py", line 121, in exec_func_with_error_handling
+    result = func()
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\runtime\scriptrunner\script_runner.py", line 593, in code_to_exec
+    exec(code, module.__dict__)
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\main.py", line 43, in <module>
+    web_Business_Cost()(budget_cal)
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\web\web_Business_Cost.py", line 34, in __call__
+    df_BudgetCost = budget_cal(selected_distrct, selected_BuildgingType, ConstCost, ConstArea)()
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\src_code\budget_cal.py", line 71, in __call__
+    df = self.calculate_Budget_for_projects(data)
+  File "C:\Users\umts2\OneDrive\Desktop\ysg\src_code\budget_cal.py", line 49, in calculate_Budget_for_projects
+    rate__ = self.construct_cost * (1 / data[[0] == '공사비'][1])
+TypeError: 'NoneType' object is not subscriptable
+2025-03-22 21:36:41.665 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+파일을 찾을 수 없습니다: ./code/rate/동대문.json
+건축비(공사비)를 입력해주세요
+2025-03-22 21:36:46.148 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+공사 면적을 입력해주세요
+2025-03-22 21:36:48.042 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+2025-03-22 21:42:03.363 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+건축비(공사비)를 입력해주세요
+2025-03-22 21:43:04.310 Serialization of dataframe to Arrow table was unsuccessful. Applying automatic fixes for column types to make the dataframe Arrow-compatible.
+Traceback (most recent call last):
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\streamlit\dataframe_util.py", line 822, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+  File "pyarrow\\table.pxi", line 4751, in pyarrow.lib.Table.from_pandas
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in dataframe_to_arrays
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 639, in <listcomp>
+    arrays = [convert_column(c, f)
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 626, in convert_column
+    raise e
+  File "C:\Users\umts2\anaconda3\envs\ysg\lib\site-packages\pyarrow\pandas_compat.py", line 620, in convert_column
+    result = pa.array(col, type=type_, from_pandas=True, safe=safe)
+  File "pyarrow\\array.pxi", line 362, in pyarrow.lib.array
+  File "pyarrow\\array.pxi", line 87, in pyarrow.lib._ndarray_to_array
+  File "pyarrow\\error.pxi", line 92, in pyarrow.lib.check_status
+pyarrow.lib.ArrowInvalid: ("Could not convert '-' with type str: tried to convert to int64", 'Conversion failed for column 인원 수 with type object')
+건축비(공사비)를 입력해주세요
+^C
