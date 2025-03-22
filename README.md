@@ -6,12 +6,12 @@
 
 1. 아래 명령어를 사용하여 저장소를 복제합니다:
 ```
-git clone https://github.com/username/repository.git
+git clone https://github.com/Eom-taeseon/ysg.git
 ```
 
 2. 복제된 디렉토리로 이동합니다:
 ```
-cd repository
+cd ysg
 ```
 
 ### 실행 방법
