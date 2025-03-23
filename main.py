@@ -16,41 +16,47 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-asset_tab, cost_tab = st.tabs(["종후자산", "사업비 산정"])
-
-with asset_tab:
-    # web_Later_Assets()()
-
-    st.title("종후자산(수입)")
-    st.header("공동주택")
-    total_area_cols, union_cols, area_cols, cost_cols = st.columns(4)
-    with total_area_cols:
-        total_area = st.number_input("공급면적 소계(평)를 입력해주세요.", value = 0, key='total_area_cols')
-    with union_cols:
-        mem_union = st.number_input("조합원 수를 입력해주세요.", value = 0, key='mem_union')
-    with area_cols:
-        avg_area = st.number_input("평균 공급면적(평)을 입력해주세요.", value = 0, key='avg_area')
-    with cost_cols:
-        avg_cost = st.number_input("일반 분양가를 입력해주세요.", value = 0, key='avg_cost')
-
-
-    
-    df_house = Later_Assets_House(mem_union, avg_cost, avg_area, total_area)()
-    st.dataframe(df_house)
-
-    st.header("상가시설")
-    arcade_area_cols, arcade_union_cols, arcade_gen_cols, arcade_cost_cols = st.columns(4)
-    with arcade_area_cols:
-        arcade_area = st.number_input("상가 공급면적 소계(m²)를 입력해주세요.", value = 0, key='arcade_area')
-    with arcade_union_cols:
-        arcade_union = st.number_input("조합원 수를 입력해주세요.", value = 100, key="arcade_union")
-    with arcade_gen_cols:
-        arcade_gen = st.number_input("분양 일반 인원수를 입력해주세요.", value = 348, key="arcade_gen")
-    with arcade_cost_cols:
-        arcade_cost = st.number_input("평단가를 입력해주세요.", value = 4000, key=arcade_cost_cols)
-
-    df_arcade = Later_Assets_Arcade(arcade_area, arcade_union, arcade_gen, arcade_cost)()
-    st.dataframe(df_arcade)
+cost_tab, asset_tab, eval_tab = st.tabs(["사업비 산정", "종후자산", "종전 자산 평가"])
 
 with cost_tab:
-    web_Business_Cost()(budget_cal)
+    total_input, construct_cost = web_Business_Cost()(budget_cal)
+with asset_tab:
+    total_output = web_Later_Assets()(Later_Assets_House, Later_Assets_Arcade)
+with eval_tab:
+    st.title("종전 자산 평가")
+    input_col, show_col = st.columns(2)
+    with input_col:
+        with st.container(border = True):
+            official_price = st.number_input("지역 평균공시지가", value = 0, key="official_price")
+            union_num = st.number_input("조합원 수", value = 0, key = "union_num")
+            cost_per_area = st.number_input("조합원 별 땅값(평당)", value = 0, key = "cost_per_area")
+
+    with show_col:
+        with st.container(border = True):
+            try:
+                avg_official_price = official_price / union_num
+            except:
+                avg_official_price = "-"
+
+            total_input__ = total_input - construct_cost - (union_num * cost_per_area)
+            md = f"""
+##### 조합원 수 {union_num}명일 때 지역 공시지가 평균 : {avg_official_price}
+##### 수입 (분양 수입) = {total_input__}
+###### ※ 수식 : 사업비 산정 총액 - 사업비 산정(공사비) 총액 - (조합원 수 * 조합원 별 땅값(평당))
+"""
+
+            st.markdown(md)
+
+    # official_price_col, union_num_col, cost_per_area_col = st.columns(3)
+    # with official_price_col:
+    #     official_price = st.number_input("지역 평균공시지가", value = 0, key="official_price")
+    # with union_num_col:
+    #     union_num = st.number_input("조합원 수", value = 0, key = "union_num")
+    # with cost_per_area_col:
+        # cost_per_area = st.number_input("조합원 별 땅 값(평 당)", value = 0, key = "cost_per_area")
+
+    st.title("수익성 분석 항목")
+    md = f"""
+### 비례율 : {((total_input - total_output) / (official_price*2.0)) * 100} %
+"""
+    st.markdown(md)

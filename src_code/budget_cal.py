@@ -53,11 +53,11 @@ class budget_cal:
         df_budget['총액'] = df_budget['평단가'] * self.construct_area
         
         # 시각적 표현만 변경 (원본 데이터는 그대로 유지)
-        df_budget = df_budget.style.format({
-            '평단가': '{:,} ₩',
-            '공사 면적': '{:,}',
-            '총액': '{:,} ₩'
-        })
+        # df_budget = df_budget.style.format({
+        #     '평단가': '{:,} ₩',
+        #     '공사 면적': '{:,}',
+        #     '총액': '{:,} ₩'
+        # })
 
         return df_budget
         # return pd.DataFrame(budget__)

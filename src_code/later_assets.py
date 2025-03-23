@@ -27,7 +27,7 @@ class Later_Assets_House:
             "총액" : int(self.total_cost_union)
         }
         self.general = {
-            "인원수": "-",
+            "인원수": 0,
             "평단가": int(avg_cost),
             "공급면적 (평)": int(self.total_area_gen),
             "총 공급면적 (평)": int(self.total_area_gen),
@@ -47,7 +47,7 @@ class Later_Assets_House:
             '총 공급면적 (평)': '{:,}',
             '총액': '{:,} ₩'
         })
-        return df_house
+        return self.df_house
     
 class Later_Assets_Arcade:
     def __init__(
@@ -102,4 +102,4 @@ class Later_Assets_Arcade:
             '공급면적 (평)': '{:,}',
             '총액': '{:,} ₩'
         })
-        return df_arcade
+        return self.df_arcade
