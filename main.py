@@ -57,7 +57,7 @@ with eval_tab:
 
     st.title("수익성 분석 항목")
     try:
-        fin_rate = ((total_input - total_output) / (official_price*2.0)) * 100}
+        fin_rate = ((total_input - total_output) / (official_price*2.0)) * 100
     except:
         fin_rate = "-"
     md = f"""
