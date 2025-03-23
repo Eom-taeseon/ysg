@@ -102,8 +102,6 @@ class Later_Assets_Arcade:
             '공급면적 (평)': '{:,}',
             '총액': '{:,} ₩'
         })
-<<<<<<< HEAD
+
         return self.df_arcade
-=======
-        return df_arcade
->>>>>>> 6b2b165fab979acbd01221a3c0be14a9d4da7cf5
+
