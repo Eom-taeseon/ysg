@@ -27,7 +27,7 @@ class Later_Assets_House:
             "총액" : int(self.total_cost_union)
         }
         self.general = {
-            "인원수": "-",
+            "인원수": 0,
             "평단가": int(avg_cost),
             "공급면적 (평)": int(self.total_area_gen),
             "총 공급면적 (평)": int(self.total_area_gen),
