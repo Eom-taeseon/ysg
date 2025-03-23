@@ -56,7 +56,11 @@ with eval_tab:
         # cost_per_area = st.number_input("조합원 별 땅 값(평 당)", value = 0, key = "cost_per_area")
 
     st.title("수익성 분석 항목")
+    try:
+        fin_rate = ((total_input - total_output) / (official_price*2.0)) * 100}
+    except:
+        fin_rate = "-"
     md = f"""
-### 비례율 : {((total_input - total_output) / (official_price*2.0)) * 100} %
+### 비례율 : {fin_rate} %
 """
     st.markdown(md)
