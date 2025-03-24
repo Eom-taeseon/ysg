@@ -1,4 +1,5 @@
 @echo off
+chcp 65001 > nul
 setlocal enabledelayedexpansion
 
 echo ===== Streamlit 애플리케이션 실행 스크립트 =====
